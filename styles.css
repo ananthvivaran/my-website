@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Frijole;
+  font-size: 40px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  background-image: url('https://source.unsplash.com/1600x900/?cyber,security');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+nav {
+  position: relative;
+  z-index: 2; /* Ensure the navigation bar stays on top of the background */
+  background: white;
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: black;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 px;
+  font-weight: normal;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5 px;
+  position: relative; /* Added for positioning the span */
+}
+
+nav ul li a {
+  color: black;
+  font-size: 25px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  position: relative; /* Added for positioning the span */
+}
+
+nav ul li a span {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover span {
+  display: block;
+  font-size: 10px;
+}
+
+nav ul li a:hover i {
+  transform: scale(1.1);
+}
+
+nav ul li a:hover {
+  border-radius: 5px;
+}
+
+nav ul li a::before { /* Added */
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+nav ul li a i {
+  position: relative;
+}
+
+a.active,
+a:hover {
+  background: whitesmoke;
+  transition: .5s;
+}
+
+.shining-effect {
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  animation: shining 3.5s infinite alternate;
+}
+
+@keyframes shining {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 100% 0;
+  }
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: whitesmoke;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+.logo1-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+}
+
+#check {
+  display: none;
+}
+
+/* Added styles for the dummy content */
+.spacer {
+  height: 1500px; /* Adjust the height to create sufficient space for scrolling */
+}
+.numbered-paragraphs {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  position: absolute;
+  left: 0;
+  top: 100%; /* Position the section below the previous content */
+  width: 100%;
+  overflow: hidden; /* Ensure that the content doesn't overflow */
+}
+
+.numbered-paragraphs .paragraph {
+  flex: 0 0 calc(100% / 2); /* Adjust the width of the paragraphs */
+  border: 1px solid whitesmoke;
+  padding: 20px;
+  margin: 10px;
+  color: white; /* Added */
+  animation: motion 0s linear infinite; /* Adjust the duration of the animation */
+}
+
+@keyframes motion {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-100%); /* Adjust the distance of motion */
+  }
+}
+
+
+
+
+@keyframes pulsateBorder {
+  0% {
+      transform: scale(1);
+      background-color: transparent; /* Start with a transparent background */
+  }
+  100% {
+      transform: scale(1.05); /* Expand the border slightly */
+      background-color: white; /* Change the background color to white */
+  }
+}
+
+@keyframes colorTransition {
+  0% {
+      color: white; /* Start with white text color */
+  }
+  100% {
+      color: black; /* Transition text color from white to black */
+  }
+}
+
+.rotating-border {
+  padding: 20px;
+  margin: 10px;
+  color: white;
+  position: relative; /* Added for absolute positioning of the rotating border */
+  border: 1px solid whitesmoke; /* Add border directly to the paragraph */
+  border-radius: 5px; /* Add border radius */
+  overflow: hidden; /* Hide overflow to prevent content from overflowing the border */
+  animation: pulsateBorder 2s ease-in-out infinite alternate, colorTransition 2s ease-in-out infinite alternate; /* Apply both animations */
+}
+
+
+.text {
+  display: none;
+  margin-top: 10px;
+}
+.hidden {
+  display: none;
+}
+
+.account-link {
+  margin-top: 20px;
+}
+
+.account-link p {
+  margin: 0;
+  text-align: center;
+}
+
+.account-link a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.account-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
