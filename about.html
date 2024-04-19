@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: frijole, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('https://media.istockphoto.com/id/1454695534/photo/beautiful-original-image-of-delicate-white-meadow-flowers-on-a-blurred-background-in-blue.webp?b=1&s=170667a&w=0&k=20&c=zERZHb_zIhR9K3-Zrwc170jLf-_HsmMUMaj4HDpA504=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .neon-text {
+            color:pink;
+            text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 70px #00ffff, 0 0 80px #00ffff, 0 0 100px #00ffff, 0 0 150px #00ffff;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .neon-border {
+            border: 2px solid #00ffff;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        ul {
+            text-align: left;
+            margin-left: 40px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .neon-button {
+            padding: 10px 20px;
+            background-color: #00ffff;
+            color: #000;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .neon-button:hover {
+            background-color: #00ccff;
+        }
+
+        .neon-icons {
+            margin-top: 20px;
+        }
+
+        .neon-icons i {
+            font-size: 36px;
+            margin: 0 10px;
+            color: palevioletred;
+            animation: pulse 1s infinite alternate;
+        }
+        .colorful-text {
+          background-image: linear-gradient(to right, #ff5e00, #ffa200, #ffd200, #ffed00, #e7ff00, #aaff00, #5bff00, #00ff02, #00ff73, #00ffa1, #00ffce, #00fff6);
+          color: transparent;
+          display: inline-block;
+          font-size: 24px;
+          font-weight: bold;
+          background-clip: text;
+      }
+
+      .animated-text {
+          animation: blink 1s infinite alternate;
+      }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="neon-text">About Us</h1>
+        <p>We are <span class="colorful-text animated-text">Your Company</span>, a team dedicated to providing innovative solutions to protect your files and data.</p>
+        <p>Our mission is to ensure the security and privacy of your sensitive information through cutting-edge encryption technology.</p>
+        <div class="neon-border">
+            <h2 class="neon-text">Why Choose File Fortress?</h2>
+            <ul>
+                <li><strong>Advanced Encryption:</strong> Utilizing industry-standard encryption algorithms, including AES (Advanced Encryption Standard), we ensure that your files are securely encrypted and protected from unauthorized access.</li>
+                <li><strong>User-Friendly Interface:</strong> Our intuitive and user-friendly interface makes it easy for anyone to encrypt and manage their files. With just a few clicks, you can encrypt your files and enjoy peace of mind knowing that your data is safe and secure.</li>
+                <li><strong>Cross-Platform Compatibility:</strong> Whether you're using a desktop computer, laptop, or mobile device, File Fortress is compatible with all major operating systems and web browsers, allowing you to access your encrypted files anytime, anywhere.</li>
+                <li><strong>Reliable Security:</strong> We employ stringent security measures to safeguard your data, including secure servers, encrypted connections, and regular security audits. Your privacy and security are our top priorities.</li>
+            </ul>
+        </div>
+        <p>Ready to protect your files with File Fortress? <a href="index.html" class="neon-button">Get Started</a></p>
+        <div class="neon-icons">
+            <!-- Use Font Awesome classes -->
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </div>
+</body>
+</html>
