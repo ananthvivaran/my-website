@@ -1,0 +1,63 @@
+/* encrypt.css */
+body, html {
+  height: 100%;
+  background-image: url('https://t4.ftcdn.net/jpg/05/72/54/67/360_F_572546714_2mn39TUv2f5Lmg7JRT9yvSkuTJERGyg8.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.container form {
+  font-family: "Frijole", sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.container form label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container form input[type="file"],
+.container form select,
+.container form input[type="submit"] {
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container form input[type="submit"] {
+  background-color: #f08d27; /* Neon color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: neonBlink 1s infinite alternate; /* Blinking animation */
+}
+
+.container form input[type="submit"]:hover {
+  background-color: #e06700; /* Neon color on hover */
+}
+
+/* Blinking animation keyframes */
+@keyframes neonBlink {
+  0% {
+    background-color:lightblue; /* Neon color 1 */
+  }
+  50% {
+    background-color:  palevioletred; /* Neon color 2 */
+  }
+  100% {
+    background-color: yellowgreen; /* Neon color 1 */
+  }
+}
