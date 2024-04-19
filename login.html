@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form" method="post">
+            <input type="text" id="email" name="email" placeholder="Email" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <div id="error-message" class="error-message"></div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            try {
+                const response = await fetch('http://localhost:3000/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await response.json();
+                if (response.ok) {
+                    alert(data.message);
+                    // Redirect to front.html upon successful login
+                    // Redirect to front.html upon successful login with username as a query parameter
+                    window.location.href = `front.html?username=${data.username}`;
+
+                } else {
+                    throw new Error(data.error || 'Login failed');
+                }
+            } catch (error) {
+                document.getElementById('error-message').innerText = error.message;
+            }
+        });
+    </script>
+</body>
+</html>
