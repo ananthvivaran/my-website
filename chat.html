@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Board</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2.5px solid black;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 2px,2px,20px rgba(0,0,0,0.4);
+    background-color: #5F4B8BFF;
+}
+
+.header h1 {
+    color: white;
+    padding: 2px;
+}
+.body{
+    flex:1;
+    color:#fff;
+    background-color:rgba(0,0,0,0,0.7);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 20px 30px;
+}
+.message{
+    background-color:#E69A8DFF ; 
+    padding:10px;
+    color:#5F4B8BFF;
+    width: fit-content;
+    border-radius: 20px;;
+
+}
+
+.user_message {
+    margin-left:auto;
+    background-color: white;
+    color:black;
+    border-radius: 20px;;
+
+}
+.footer form{
+    display:flex;
+}
+form input{
+   flex:1;
+   height: 40px;
+   border:none;
+   outline:none;
+   padding-left: 5 px;
+   font-size: 16px;
+   border-radius: 20px;
+}
+
+form button {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>Web Chat</h1></div>
+
+        <div class="body">
+           <p class="message">Hello</p>
+           <p class="message user_message">Hi</p></div>
+
+        <div class="footer"></div>
+          <form>
+            <input type="text" name="">
+           <button>Send</button>
+           </form>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
